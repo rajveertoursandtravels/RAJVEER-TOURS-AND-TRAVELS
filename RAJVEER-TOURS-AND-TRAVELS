@@ -41,18 +41,26 @@
             font-weight: 500;
         }
 
+        /* HERO SECTION - Updated with your Image and Fixed Blurriness */
         .hero {
-            height: 50vh;
+            height: 60vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             color: white;
-            /* Using your first image as the background */
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://i.ibb.co/Q30hCpJm/1.jpg');
+            /* Your specific image link added below */
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.ibb.co/HTCNknK1/7.jpg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed; /* This makes it look sharper/smoother */
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         .container {
@@ -142,6 +150,23 @@
             border-top: 5px solid #f1c40f;
         }
 
+        /* NEW: Call Now Button Style */
+        .call-btn {
+            display: inline-block;
+            margin-top: 20px;
+            background: #27ae60;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .call-btn:hover {
+            background: #2ecc71;
+        }
+
         footer {
             background: #2c3e50;
             color: white;
@@ -164,7 +189,8 @@
 
     <section class="hero" id="home">
         <h1>Explore The World With Us</h1>
-        <p>Premium AC &amp; Non-AC Car Rentals | Tap images to view full size</p>
+        <p>Premium AC &amp; Non-AC Car Rentals</p>
+        <a href="tel:9664782852" class="call-btn">📞 Book Now</a>
     </section>
 
     <section class="container" id="gallery">
