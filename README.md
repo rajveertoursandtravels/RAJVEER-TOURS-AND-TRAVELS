@@ -26,7 +26,6 @@
             height: 50vh; display: flex; flex-direction: column;
             justify-content: center; align-items: center; text-align: center;
             color: white; 
-            /* Background uses image 1.jpeg */
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('1.jpeg');
             background-size: cover; background-position: center;
         }
@@ -39,7 +38,7 @@
             width: 100%; height: 220px; overflow: hidden; 
             border-radius: 12px; cursor: pointer; border: 2px solid #eee;
             transition: transform 0.3s, box-shadow 0.3s;
-            background-color: #ddd; /* Placeholder color if image fails */
+            background-color: #ddd;
         }
         .image-box:hover { transform: scale(1.03); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
         .image-box img { width: 100%; height: 100%; object-fit: cover; }
@@ -113,20 +112,17 @@
     <section class="contact-section" id="contact">
         <h2 style="margin-bottom: 40px;">Contact Our Experts</h2>
         <div class="contact-flex">
-            
             <div class="contact-card">
                 <h3>BHIKHUBHA SODHA</h3>
                 <p>📞 9664782852</p>
                 <p>📞 9586574902</p>
             </div>
-
             <div class="contact-card">
                 <h3>NARPALSINH JADEJA</h3>
                 <p>📞 9687213791</p>
                 <p>📞 9723697117</p>
                 <p>✉️ <a href="mailto:Narpalsinhjadeja86@gmail.com">Narpalsinhjadeja86@gmail.com</a></p>
             </div>
-
         </div>
     </section>
 
