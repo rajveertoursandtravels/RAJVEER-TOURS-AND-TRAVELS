@@ -13,7 +13,7 @@
             line-height: 1.6;
             color: #333;
             scroll-behavior: smooth;
-            background-color: #fcfcfc;
+            background-color: #f4f4f4;
         }
 
         header {
@@ -41,62 +41,75 @@
             font-weight: 500;
         }
 
-        /* HERO SECTION - Updated with your Image and Fixed Blurriness */
+        /* WORLD SECTION - Updated with your requested image */
         .hero {
-            height: 60vh;
+            height: 75vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             color: white;
-            /* Your specific image link added below */
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.ibb.co/HTCNknK1/7.jpg');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://i.ibb.co/JWWj2rrk/1.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* This makes it look sharper/smoother */
+            background-attachment: fixed; 
+            background-repeat: no-repeat;
         }
 
         .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin: 0;
+            text-shadow: 3px 3px 15px rgba(0,0,0,1);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-top: 10px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
         }
 
         .container {
-            width: 90%;
+            width: 95%;
             max-width: 1200px;
-            margin: 3rem auto;
+            margin: -50px auto 3rem; 
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
         .image-box {
             width: 100%;
-            height: 220px;
+            height: 350px; 
             overflow: hidden;
-            border-radius: 12px;
+            border-radius: 15px;
             cursor: pointer;
-            border: 2px solid #eee;
-            transition: transform 0.3s, box-shadow 0.3s;
-            background-color: #ddd;
+            border: 1px solid #eee;
+            background-color: #ffffff;
+            transition: 0.3s ease;
         }
 
         .image-box:hover {
-            transform: scale(1.03);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.2);
         }
 
         .image-box img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: contain; 
+            image-rendering: -webkit-optimize-contrast; 
+            background: #fff;
         }
 
+        /* LIGHTBOX POPUP */
         .lightbox {
             display: none;
             position: fixed;
@@ -108,29 +121,28 @@
             background: rgba(0, 0, 0, 0.9);
             justify-content: center;
             align-items: center;
-            cursor: zoom-out;
         }
 
         .lightbox img {
-            max-width: 90%;
-            max-height: 85%;
-            border: 4px solid white;
-            border-radius: 8px;
+            max-width: 95%;
+            max-height: 90%;
+            border: 3px solid #f1c40f;
         }
 
         .close-btn {
             position: absolute;
             top: 20px;
-            right: 30px;
-            color: white;
-            font-size: 45px;
+            right: 40px;
+            color: #f1c40f;
+            font-size: 60px;
             cursor: pointer;
-            font-weight: bold;
         }
 
+        /* CONTACT SECTION */
         .contact-section {
-            background: #ecf0f1;
-            padding: 4rem 5%;
+            background: #2c3e50;
+            color: white;
+            padding: 5rem 5%;
             text-align: center;
         }
 
@@ -138,38 +150,33 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
+            gap: 40px;
+            margin-top: 30px;
         }
 
         .contact-card {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            min-width: 300px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            border-top: 5px solid #f1c40f;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            width: 320px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
         }
 
-        /* NEW: Call Now Button Style */
         .call-btn {
             display: inline-block;
             margin-top: 20px;
-            background: #27ae60;
-            color: white;
-            padding: 12px 25px;
+            background: #f1c40f;
+            color: #2c3e50;
+            padding: 15px 40px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            transition: background 0.3s;
-        }
-
-        .call-btn:hover {
-            background: #2ecc71;
         }
 
         footer {
-            background: #2c3e50;
-            color: white;
+            background: #1a252f;
+            color: #bdc3c7;
             text-align: center;
             padding: 2rem;
         }
@@ -190,47 +197,47 @@
     <section class="hero" id="home">
         <h1>Explore The World With Us</h1>
         <p>Premium AC &amp; Non-AC Car Rentals</p>
-        <a href="tel:9664782852" class="call-btn">📞 Book Now</a>
     </section>
 
     <section class="container" id="gallery">
-        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 30px;">Our Fleet &amp; Gallery</h2>
+        <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 40px; color: #2c3e50;">Our Professional Fleet</h2>
         <div class="grid">
-            <div class="image-box" onclick="openLightbox('https://i.ibb.co/Q30hCpJm/1.jpg')"><img src="https://i.ibb.co/Q30hCpJm/1.jpg" alt="Rajveer Car 1"></div>
-            <div class="image-box" onclick="openLightbox('https://i.ibb.co/C3mGSQhG/2.jpg')"><img src="https://i.ibb.co/C3mGSQhG/2.jpg" alt="Rajveer Car 2"></div>
-            <div class="image-box" onclick="openLightbox('https://i.ibb.co/Swv773mb/3.jpg')"><img src="https://i.ibb.co/Swv773mb/3.jpg" alt="Rajveer Car 3"></div>
-            <div class="image-box" onclick="openLightbox('https://i.ibb.co/KcvW0qDc/4.jpg')"><img src="https://i.ibb.co/KcvW0qDc/4.jpg" alt="Rajveer Car 4"></div>
-            <div class="image-box" onclick="openLightbox('https://i.ibb.co/1GRLfwwW/5.jpg')"><img src="https://i.ibb.co/1GRLfwwW/5.jpg" alt="Rajveer Car 5"></div>
-            <div class="image-box" onclick="openLightbox('https://i.ibb.co/n880Npgc/6.jpg')"><img src="https://i.ibb.co/n880Npgc/6.jpg" alt="Rajveer Car 6"></div>
-            <div class="image-box" onclick="openLightbox('https://i.ibb.co/HTCNknK1/7.jpg')"><img src="https://i.ibb.co/HTCNknK1/7.jpg" alt="Rajveer Car 7"></div>
-            <div class="image-box" onclick="openLightbox('https://i.ibb.co/B5TwY94p/8.jpg')"><img src="https://i.ibb.co/B5TwY94p/8.jpg" alt="Rajveer Car 8"></div>
+            <div class="image-box" onclick="openLightbox('https://i.ibb.co/67TcsmTY/89.jpg')"><img src="https://i.ibb.co/67TcsmTY/89.jpg" alt="Car 89"></div>
+            <div class="image-box" onclick="openLightbox('https://i.ibb.co/840fyYPk/7.jpg')"><img src="https://i.ibb.co/840fyYPk/7.jpg" alt="Car 7"></div>
+            <div class="image-box" onclick="openLightbox('https://i.ibb.co/fzFnBtNZ/6.jpg')"><img src="https://i.ibb.co/fzFnBtNZ/6.jpg" alt="Car 6"></div>
+            <div class="image-box" onclick="openLightbox('https://i.ibb.co/m5XDDCGd/5.jpg')"><img src="https://i.ibb.co/m5XDDCGd/5.jpg" alt="Car 5"></div>
+            <div class="image-box" onclick="openLightbox('https://i.ibb.co/1GxNNqmS/4.jpg')"><img src="https://i.ibb.co/1GxNNqmS/4.jpg" alt="Car 4"></div>
+            <div class="image-box" onclick="openLightbox('https://i.ibb.co/DPSNJC3S/3.jpg')"><img src="https://i.ibb.co/DPSNJC3S/3.jpg" alt="Car 3"></div>
+            <div class="image-box" onclick="openLightbox('https://i.ibb.co/yFFYCN9g/2.jpg')"><img src="https://i.ibb.co/yFFYCN9g/2.jpg" alt="Car 2"></div>
+            <div class="image-box" onclick="openLightbox('https://i.ibb.co/JWWj2rrk/1.jpg')"><img src="https://i.ibb.co/JWWj2rrk/1.jpg" alt="Car 1"></div>
         </div>
     </section>
 
     <div id="lightboxOverlay" class="lightbox" onclick="closeLightbox()">
         <span class="close-btn">&times;</span>
-        <img id="lightboxImg" src="" alt="Full View">
+        <img id="lightboxImg" src="" alt="View">
     </div>
 
     <section class="contact-section" id="contact">
-        <h2 style="margin-bottom: 40px;">Contact Our Experts</h2>
+        <h2>Contact Our Experts</h2>
         <div class="contact-flex">
             <div class="contact-card">
                 <h3>BHIKHUBHA SODHA</h3>
                 <p>📞 9664782852</p>
                 <p>📞 9586574902</p>
+                <a href="tel:9664782852" class="call-btn">Call Now</a>
             </div>
             <div class="contact-card">
                 <h3>NARPALSINH JADEJA</h3>
                 <p>📞 9687213791</p>
                 <p>📞 9723697117</p>
-                <p>✉️ <a href="mailto:Narpalsinhjadeja86@gmail.com">Narpalsinhjadeja86@gmail.com</a></p>
+                <a href="tel:9687213791" class="call-btn">Call Now</a>
             </div>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Rajveer Tours and Travels. All rights reserved.</p>
+        <p>&copy; 2026 Rajveer Tours and Travels.</p>
     </footer>
 
     <script>
